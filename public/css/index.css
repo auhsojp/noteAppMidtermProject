@@ -1,0 +1,139 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    color: #333;
+}
+
+/* Center the heading */
+.title {
+    position: sticky;
+    top: 0;
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+/* Container for notes in a single column */
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Note link styles */
+.note-link {
+    text-decoration: none;
+    width: 100%;
+}
+
+/* Individual note card styles */
+.note-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+/* Card hover effect */
+.note-card:hover {
+    transform: translateY(-5px);
+    background-color: #ecf0f1;
+}
+
+/* Title and content styling */
+.note-card p {
+    font-size: 2.5em;
+    color: #7f8c8d;
+    line-height: 1em;
+    margin-bottom: 10px;
+    flex: auto;
+}
+
+.note-card h2 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-top: 7px;
+}
+
+/* Success message styling */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Add new note button */
+.add-note {
+    position: sticky;
+    text-align: center;
+    margin-top: 20px;
+    float: right;
+    margin-right: 20px;
+    
+}
+
+.add-note button {
+    position: sticky;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-note button:hover {
+    background-color: #2980b9;
+}
+
+.add-note button a {
+    color: white;
+    text-decoration: none;
+}
+
+.add-note button a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .note-card {
+        width: 100%;
+    }
+
+    .add-note button {
+        width: 100%;
+    }
+
+    .notes-container {
+        width: 100%;
+    }
+}
