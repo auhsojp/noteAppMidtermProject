@@ -10,7 +10,7 @@
     <h1 class="sticky-title">Edit Note</h1>
 
     <div class="note-edit-container">
-        <form method="post" action="{{route('update', ['note' => $note])}}" class="edit-form">
+        <form method="post" action="{{route('notes.update', ['note' => $note])}}" class="edit-form">
             @csrf
             @method('put')
 
@@ -28,7 +28,7 @@
         </form>
     </div>
     <div class="back-button-container">
-        <a href="{{ route('index') }}" class="button back-button">Back to Notes</a>
+        <a href="{{ route('notes.index') }}" class="button back-button">Back to Notes</a>
     </div>
 </body>
 </html>

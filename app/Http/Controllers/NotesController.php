@@ -9,7 +9,7 @@ class NotesController extends Controller
 {
     
     public function index(){
-        $notes = Note::all();
+        $notes = Note::latest()->get();
         return view('index', ['notes' => $notes]);
     }
     public function show(Note $note)
@@ -27,7 +27,7 @@ class NotesController extends Controller
 
         $newNoteS = Note::create($validatedData);
 
-        return redirect(route('index'));
+        return redirect(route('notes.index'));
 
     }
 
@@ -42,11 +42,16 @@ class NotesController extends Controller
         ]);
 
         $note->update($validatedData);
-        return redirect(route('index'))->with('success', 'Notes Successfully Edited');
+        return redirect(route('notes.index'))->with('success', 'Notes Successfully Edited');
     }
 
     public function delete(Note $note){
         $note->delete();
-        return redirect(route('index'))->with('success', 'Notes  Successfully deleted');
+        return redirect(route('notes.index'))->with('success', 'Notes  Successfully deleted');
     }
+
+    public function log(Request $request){
+        return redirect()->route('notes.index'); 
+}
+
 }

@@ -10,7 +10,7 @@
     <h1 class="sticky-title">Create New Note</h1>
 
     <div class="note-create-container">
-        <form method="post" action="{{ route('save') }}" class="create-form">
+        <form method="post" action="{{ route('notes.save') }}" class="create-form">
             @csrf  
             @method('post')
             <div class="form-group">
@@ -27,7 +27,7 @@
         </form>
     </div>
     <div class="back-button-container">
-        <a href="{{ route('index') }}" class="button back-button">Back to Notes</a>
+        <a href="{{ route('notes.index') }}" class="button back-button">Back to Notes</a>
     </div>
 </body>
 </html>

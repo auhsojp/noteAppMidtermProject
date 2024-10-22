@@ -38,19 +38,25 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden; 
 }
 
-/* Note content - larger than title */
 .note-content {
     font-size: 1.5em;
-    text-overflow: ellipsis;
+    max-height: 300px;
+    overflow-y: auto; 
+    white-space: pre-wrap; 
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+    width: 100%; 
 }
 
-/* Note title */
 .note-title {
     font-size: 1.2em;
     color: #2c3e50;
     margin-bottom: 20px;
+    width: 100%; 
+    text-align: left;
 }
 
 /* Buttons for Edit, Delete, Back */
